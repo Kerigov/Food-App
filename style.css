@@ -1,0 +1,51 @@
+       body {
+            box-sizing: border-box;
+        }
+        .meal-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .meal-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .add-meal-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        .modal-backdrop {
+            backdrop-filter: blur(4px);
+        }
+
+        /* --- Overall section styling --- */
+.menu-section {
+  margin-bottom: 2rem; /* spacing below each section */
+}
+
+/* --- Header container (flex) --- */
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem; /* mb-8 = 2rem */
+}
+
+/* --- Title styling --- */
+.menu-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: bold;
+  color: #1f2937; /* gray-800 */
+  border-bottom: 4px solid #f87171; /* red-400 */
+  padding-bottom: 0.5rem; /* pb-2 */
+}
+
+/* --- Count badge styling --- */
+.menu-count {
+  background-color: #fee2e2; /* red-100 */
+  color: #991b1b; /* red-800 */
+  padding: 0.25rem 0.75rem; /* py-1 px-3 */
+  border-radius: 9999px; /* rounded-full */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+}
