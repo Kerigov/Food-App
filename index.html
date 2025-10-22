@@ -345,25 +345,6 @@ Discover dishes made to delight your senses and inspire your inner foodie, Taste
                 price: parseFloat(formData.get('mealPrice')),
                 type: formData.get('mealType')
             };
-
-            // Add to meals data
-            meals[mealData.type].push(mealData);
-
-            // Create meal card
-            const mealCard = createMealCard(mealData);
-            
-            // Add to appropriate grid
-            const gridId = getGridId(mealData.type);
-            document.getElementById(gridId).appendChild(mealCard);
-
-            // Update counters
-            updateCounters();
-
-            // Close modal
-            closeAddMealModal();
-
-            // Show success message
-            showSuccessMessage(`${mealData.name} has been added to the menu!`);
         }
 
         // Create meal card HTML
@@ -448,12 +429,6 @@ Discover dishes made to delight your senses and inspire your inner foodie, Taste
             }, 3000);
         }
 
-        // Close modal when clicking outside
-        document.getElementById('addMealModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeAddMealModal();
-            }
-        });
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9923572e96e5b281',t:'MTc2MTA3NjgyMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
